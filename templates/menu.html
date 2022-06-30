@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}  
+
+ <!-- ======= Menu Section ======= -->
+ <section id="menu" class="menu section-bg" style="padding-top: 10%";>
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <p>Check Our Tasty Menu</p>
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="menu-flters">
+           <a href="{% url 'menu' %} "> All </a>
+          {% for category in categories %}
+          <a href="{% url 'menu_id' category.id %} "> {{ category.name }} </a>
+          {% endfor %}
+        </ul>
+      </form>
+      </div>
+    </div>
+    
+    
+    <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+      {% for food in foods %}
+      <div class="col-lg-6 menu-item filter-starters">
+        <img src="{{ food.img.url }}" class="menu-img" alt="">
+        
+        <div class="menu-content">
+          <a href="#">{{ food.name }}</a><span>{{ food.price }}$</span>
+          
+        </div>
+        <div class="menu-ingredients">
+          {{ food.desc }}
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>  <!-- End Menu Section -->
+
+  {% endblock %} 

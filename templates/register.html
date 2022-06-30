@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block content%} 
+    <section class="ftco-section" style="padding-top: 10%;">
+		<div class="container">
+			
+			<div class="row justify-content-center">
+				
+                    <div class="wrap d-md-flex">
+						
+						<div class="img" style="background-image: url({% static 'img/events-bg.jpg' %});">
+						<div class="login-wrap p-4 p-md-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">Registration</h3>
+			      		</div>
+					
+			      	</div>
+							<form action="{% url 'register' %}" method="POST">
+								{%csrf_token%}
+								<div class="row">
+									<div class="col-md-6 form-group">
+										<label class="label" for="name">First Name</label>
+			      						<input type="text" class="form-control" placeholder="First Name" name="first_name" id="first_name"required>
+			      					</div><br>
+
+									<div class="col-md-6 form-group mt-3 mt-md-0">
+										<label class="label" for="name">Last Name</label>
+										<input type="text" class="form-control" placeholder="Last Name" name="last_name" required>
+									</div>
+									<br>
+
+									<div class="col-md-6 form-group">
+										<label class="label" for="name">Username</label>
+										<input type="text" class="form-control" placeholder="Username" name="username" required>
+										</div><br>
+
+									<div class="col-md-6 form-group mt-3 mt-md-0">
+										<label class="label" for="name">Email</label>
+										<input type="text" class="form-control" placeholder="Email"  name="email" required>
+										</div><br>
+		            				<div class="col-md-6 form-group">
+		            					<label class="label" for="password">Password</label>
+		              					<input type="password" class="form-control" placeholder="Password" name="password1" required>
+		            					</div><br>
+										<br>
+									<div class="col-md-6 form-group mt-3 mt-md-0">
+		            					<label class="label" for="password">Confirm Password</label>
+		              					<input type="password" class="form-control" placeholder="Confirm Password" name="password2" required>
+		            					</div><br>
+
+		            				<div class="form-group mt-3">
+										<div class="text-center"><button type="submit">Register</button>
+		            </div>
+		          </form>
+		          <p class="text-center">Already a member? <a href="{% url 'login'%}">LOGIN</a></p>
+		        </div>
+		      </div>
+				</div>
+			</div>
+			
+		
+			</form>
+		</div>
+	</section>
+{%endblock%}
+
+
+					
+    <!--<form action ="register" method ="post">
+        {% csrf_token %}
+        <input type ="text" name = "first_name" placeholder = "first_name"><br>
+        <input type ="text" name = "last_name" placeholder = "last_name"><br>
+        <input type ="text" name = "username" placeholder = "username"><br>
+        <input type ="email" name = "email" placeholder = "email"><br>
+        <input type ="password" name = "password1" placeholder = "password1"><br>
+        <input type ="password" name = "password2" placeholder = "password2"><br>
+        <input type ="submit">
+    </form>
+</body>
+</html>-->

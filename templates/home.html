@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block content%}  
+
+<section id="hero" class="d-flex align-items-center"  style="padding-top: 10%;">
+  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>Welcome to <span>Elfido</span></h1>    
+        <h2>Delivering great food for more than 18 years!</h2>
+
+        <div class="btns">
+          <a href="{% url 'menu' %}" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+          <a href="{% url 'booktable' %}"class="btn-book animated fadeInUp scrollto">Book a Table</a>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+        <!--<a href="{% static 'https://www.youtube.com/watch?v=GlrxcuEDyF8' %}" class="glightbox play-btn"></a>-->
+      </div>
+
+    </div>
+  </div>
+</section><!-- End Hero -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="{% static 'img/about.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>About Us.</h3>
+            <p class="fst-italic">
+              What Makes us a Great Restaurant?.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Friendly, personalized service.</li>
+              <li><i class="bi bi-check-circle"></i> Consistently great food.</li>
+              <li><i class="bi bi-check-circle"></i>A memorable atmosphere.</li>
+              <li><i class="bi bi-check-circle"></i>Efficient customer service.</li>
+            </ul>
+            <p>
+              A good cook understands your guests'
+              needs and works well with the kitchen staff to ensure
+              that guests receive their meal the way they ordered it every time.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Why Us</h2>
+          <p>Why Choose Our Restaurant</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>01</span>
+              <h4>Personalized service</h4>
+              <p>A special place for families where they can enjoy their meal together. </p>
+            </div>
+          </div>
+          
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <span>02</span>
+              <h4>Consistently great food</h4>
+              <p>At our place we always try our best to satisfy customer </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="400">
+              <span>03</span>
+              <h4> A memorable atmosphere</h4>
+              <p>We have a great place for every age group with healthy atmosphere</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    
+{% endblock%}  
+
+ 
